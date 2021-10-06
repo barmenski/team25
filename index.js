@@ -17,7 +17,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: 'https://example.com',
+    origin: 'https://team25n.herokuapp.com/',
     methods: ['GET', 'POST'],
   },
 });
