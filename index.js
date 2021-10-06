@@ -51,7 +51,7 @@ const {
   getTimerStatus,
 } = require('./timer');
 
-io.on('connection', (socket) => {
+io.once('connection', (socket) => {
   io.in(socket).emit('rooms', getRooms());
   socket.on('login', ({ values, room }, callback) => {
     const { member, error } = addUser(socket.id, room, values);
