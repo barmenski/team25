@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
-const publicPath = path.resolve(__dirname, '/src/build');
-const indexPath = path.resolve(__dirname, '/src/build/index.html');
+const publicPath = path.resolve(__dirname, './src/build');
+const indexPath = path.resolve(__dirname, './src/build/index.html');
 
 // if query not starts with '/api/' string - send file from "build""
 app.use(/^(?!\/api\/)/, express.static(publicPath));
