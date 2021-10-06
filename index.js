@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 const path = require('path');
 const http = require('http').createServer(app);
@@ -7,6 +7,20 @@ const cors = require('cors');
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
+*/
+const path = require('path');
+const express = require('app');
+const { createServer } = require('http');
+const { Server } = require('socket.io');
+
+const app = express();
+const httpServer = createServer(app);
+const io = new Server(httpServer, {
+  cors: {
+    origin: 'https://example.com',
+    methods: ['GET', 'POST'],
+  },
+});
 
 const publicPath = path.resolve(__dirname, './src/build');
 const indexPath = path.resolve(__dirname, './src/build/index.html');
@@ -18,7 +32,7 @@ app.use(/^(?!\/api\/)/, (req, res) => {
   res.sendFile(indexPath);
 });
 
-const io = require('socket.io')(http);
+//const io = require('socket.io')(http);
 
 const {
   addUser,
@@ -51,7 +65,7 @@ const {
   getTimerStatus,
 } = require('./timer');
 
-io.once('connection', (socket) => {
+io.on('connection', (socket) => {
   io.in(socket).emit('rooms', getRooms());
   socket.on('login', ({ values, room }, callback) => {
     const { member, error } = addUser(socket.id, room, values);
@@ -224,6 +238,9 @@ io.once('connection', (socket) => {
   });
 });
 
+httpServer.listen(5000);
+/*
 http.listen(PORT, () => {
   console.log(`Listening to ${PORT}`);
 });
+*/
