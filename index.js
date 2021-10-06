@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 */
 const path = require('path');
-const express = require('app');
+const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 
