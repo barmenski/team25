@@ -1,0 +1,26 @@
+{
+  "name": "team25",
+  "version": "1.0.0",
+  "description": "for deploy planning-poker app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd ./src/build && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barmenski/team25.git"
+  },
+  "author": "barmenski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barmenski/team25/issues"
+  },
+  "homepage": "https://github.com/barmenski/team25#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  }
+}
