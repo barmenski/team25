@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 const path = require('path');
 const http = require('http').createServer(app);
@@ -8,6 +8,22 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 const io = require('socket.io')(http);
+*/
+// load and create instance of express
+const express = require('express');
+const app = express();
+
+const path = require('path');
+const PORT = process.env.PORT || 5000;
+
+// create http server
+const server = require('http').createServer(app);
+
+// create socket.io handler and hook it to the http server
+const io = module.exports.io = require('socket.io')(server);
+
+
+/* client have: const socket = io(); try without cors*/
 
 /*
 const express = require('express');
@@ -239,6 +255,14 @@ io.on('connection', (socket) => {
 /*
 httpServer.listen(5000);
 */
+
+// start http server on port 8070
+// This should be the server that is hooked to the domain at myweb.io
+server.listen(PORT, function(){
+    console.log('listening on *:' + 8070);
+});
+/*
 http.listen(PORT, () => {
   console.log(`Listening to ${PORT}`);
 });
+*/
