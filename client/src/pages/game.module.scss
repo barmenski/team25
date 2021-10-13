@@ -1,0 +1,120 @@
+
+.mastersFlexBlock {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 86%;
+  margin-bottom: 20px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.masterNavBlock {
+  justify-content: space-between;
+  align-items: center;
+
+   @media (max-width: 1240px) {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+}
+
+.mastersBlock {
+  width: 70%;
+  border-color: rgba(128, 128, 128, 0.1);
+  border-width: 2px;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+
+  @media (max-width: 1240px) {
+    width: 400px;
+    border: none;
+  }
+}
+
+.issues_timer_block {
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: 1240px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.roundControl {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 1240px) {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.controlsButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1240px) {
+    flex-direction: row;
+  }
+}
+
+.memberCard {
+  @media (max-width: 900px) {
+    width: 200px !important;
+  }
+}
+
+.nameBox {
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.scoreTableBlock {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.scoreTable {
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.scoreBlock {
+  justify-content: flex-start;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+}
+
+.blocksTitle {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 25px 20px;
+
+  @media (max-width: 1000px) {
+    // font-size: 24px;
+    margin: 30px 25px 0;
+  }
+}

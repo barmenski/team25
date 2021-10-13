@@ -1,0 +1,70 @@
+@import '../../styles.scss';
+
+$padding: 45px;
+$maxWidth: 1440px;
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $maxWidth;
+  padding-right: $padding;
+  padding-left: $padding;
+  min-height: calc(100vh - 175px);
+}
+
+.header {
+  &__firstRow {
+    background-color: $darkBlue;
+    height: 50px;
+  }
+
+  &__secondRow {
+    background-color: $cadetBlue;
+    height: 20px;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 18px;
+}
+
+.chatIcon {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  background-color: $darkBlue;
+  color: #fff;
+  padding-right: $padding;
+  padding-left: $padding;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__autors {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+}

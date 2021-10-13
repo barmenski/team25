@@ -1,0 +1,11 @@
+.blocksTitle {
+  font-size: 28px;
+  text-align: center;
+  margin: 30px auto 20px;
+
+  @media (max-width: 1000px) {
+    font-size: 24px;
+    text-align: start;
+    margin-left: 30px;
+  }
+}
